@@ -15,15 +15,15 @@ changes to the manifests in Git.
 To use parameter overrides, run the `argocd app set -p (COMPONENT=)PARAM=VALUE` command:
 
 ```bash
-argocd app set guestbook -p guestbook=image=example/guestbook:abcd123
+argocd app set guestbook -p image=example/guestbook:abcd123
 argocd app sync guestbook
 ```
 
 The `PARAM` is expected to be a normal YAML path
 
 ```bash
-argocd app set guestbook -p guestbook=ingress.enabled=true
-argocd app set guestbook -p guestbook=ingress.hosts[0]=guestbook.myclusterurl
+argocd app set guestbook -p ingress.enabled=true
+argocd app set guestbook -p ingress.hosts[0]=guestbook.myclusterurl
 ```
 
 The following are situations where parameter overrides would be useful:
